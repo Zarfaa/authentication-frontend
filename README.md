@@ -7,7 +7,7 @@ It provides authentication flows, including **signup, login, email verification,
 
 ### 1️ Clone the Repository  
 ```bash
-git clone https://github.com/<your-username>/<your-repo>.git
+git clone https://github.com/<username>/<repo>.git
 cd <your-repo>
 ```
 
