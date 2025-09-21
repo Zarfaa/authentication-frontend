@@ -7,11 +7,10 @@ It provides authentication flows with **signup, login, email verification, and p
 ##  Getting Started  
 
 ### 1️ Clone the Repository  
-```bash
 git clone https://github.com/<your-username>/<your-repo>.git
 cd <your-repo>
 
-### 2 Install Dependencies
+### Install Dependencies  
 npm install
 
 ### 3 Run the Development Server
@@ -23,7 +22,7 @@ npm run dev → Start dev server with HMR
 npm run build → Build production bundle
 
 
-📂 Project Structure
+### 📂 Project Structure
 authentication-frontend/
 ├── public/             # Static assets
 ├── src/
@@ -36,11 +35,11 @@ authentication-frontend/
 ├── package.json
 └── vite.config.js
 
-⚙️ Environment Variables
+### ⚙️ Environment Variables
 Create a .env file in the root of your project and add:
 VITE_API_BASE=http://localhost:5000/api
 
-👨‍💻 Tech Stack
+### 👨‍💻 Tech Stack
 - React + Vite → Fast frontend development
 - Tailwind CSS → Utility-first styling
 - Axios → API calls
