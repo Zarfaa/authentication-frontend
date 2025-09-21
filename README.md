@@ -8,7 +8,7 @@ It provides authentication flows, including **signup, login, email verification,
 ### 1️ Clone the Repository  
 ```bash
 git clone https://github.com/Zarfaa/authentication-frontend.git
-cd <your-repo>
+cd authentication-frontend
 ```
 
 ### Install Dependencies  
