@@ -17,23 +17,10 @@ npm install
 npm run dev
 The app will be available at 👉 http://localhost:5173
 
-###  Available Scripts
+
+## Available Scripts
 npm run dev → Start dev server with HMR
 npm run build → Build production bundle
-
-
-### 📂 Project Structure
-authentication-frontend/
-├── public/             # Static assets
-├── src/
-│   ├── assets/         # Logos, images
-│   ├── components/     # Reusable UI components
-│   ├── features/       # App pages (Login, Signup, ConfirmEmail, etc.)
-│   ├── services/       # Backend API Urls
-│   └── main.jsx        # App entry point
-├── .env                # Environment variables
-├── package.json
-└── vite.config.js
 
 ### ⚙️ Environment Variables
 Create a .env file in the root of your project and add:
