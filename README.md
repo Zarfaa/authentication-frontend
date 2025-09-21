@@ -1,17 +1,26 @@
 # 🔐 Authentication Frontend (React + Vite)
 
-This project is a frontend for the **Authentication App**, built with **React**, **Vite**, and **Tailwind CSS**.  
-It includes authentication flows with email verification, password reset, and branded UI.  
+This project is the **frontend** for the Authentication App, built with **React**, **Vite**, and **Tailwind CSS**.  
+It provides authentication flows with **signup, login, email verification, and password reset** along with branded UI.  
 
 ---
 
-## 🚀 Getting Started  
+## 📑 Table of Contents
+- [🚀 Getting Started](#-getting-started)
+- [📂 Project Structure](#-project-structure)
+- [⚙️ Environment Variables](#️-environment-variables)
+- [🛠 Available Scripts](#-available-scripts)
+- [👨‍💻 Tech Stack](#-tech-stack)
+---
 
-### 1. Clone the Repository  
+##  Getting Started  
+
+### 1️ Clone the Repository  
 ```bash
 git clone https://github.com/<your-username>/<your-repo>.git
 cd <your-repo>
-2. Install Dependencies
+
+### 2 Clone the Repository 
 npm install
 
 3. Run the Development Server
@@ -35,8 +44,8 @@ authentication-frontend/
 ├── src/
 │   ├── assets/         # Logos, images
 │   ├── components/     # Reusable UI components
-│   ├── pages/          # App pages (Login, Signup, ConfirmEmail, etc.)
-│   ├── styles/         # Tailwind and custom CSS
+│   ├── features/       # App pages (Login, Signup, ConfirmEmail, etc.)
+│   ├── services/       # Backend API Urls
 │   └── main.jsx        # App entry point
 ├── .env                # Environment variables
 ├── package.json
