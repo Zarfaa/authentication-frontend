@@ -1,8 +1,7 @@
-# 🔐 Authentication Frontend (React + Vite)
+#  Authentication Frontend (React + Vite)
 
 This project is the **frontend** for the Authentication App, built with **React**, **Vite**, and **Tailwind CSS**.  
-It provides authentication flows with **signup, login, email verification, and password reset** along with branded UI.  
----
+It provides authentication flows, including **signup, login, email verification, and password reset**, along with a branded UI.  
 
 ##  Getting Started  
 
