@@ -33,26 +33,29 @@ const ConfirmEmail = () => {
   }, [token]);
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
-      <div className="card w-full max-w-md shadow-2xl bg-white p-8 text-center rounded-2xl">
-        <div className="flex flex-col items-center mb-6">
-          <img src={logo} alt="Analytics Auditor Logo" className="h-12 mb-3" />
+    <div className="flex justify-center items-center min-h-screen px-4 sm:px-6">
+      <div className="card w-full max-w-md shadow-2xl bg-white p-5 sm:p-8 text-center rounded-2xl">
+        <div className="flex flex-col items-center mb-4 sm:mb-6">
+          <img
+            src={logo}
+            alt="Analytics Auditor Logo"
+            className="h-10 sm:h-12 mb-3"
+          />
         </div>
-        <p
-          className={`mb-8 text-lg`}
-        >
+        <p className="mb-5 sm:mb-8 text-sm sm:text-lg text-gray-700 leading-relaxed">
           {message}
         </p>
         {message.includes("verified") && (
           <Link
             to="/"
-            className="py-2 px-6 bg-primary text-white font-semibold rounded-lg shadow hover:bg-primary-dark transition-colors"
+            className="inline-block w-full sm:w-auto py-2 px-4 sm:px-6 bg-primary text-white font-semibold rounded-lg shadow hover:bg-primary-dark transition-colors text-sm sm:text-base"
           >
             Go to Login
           </Link>
         )}
       </div>
     </div>
+
   );
 };
 

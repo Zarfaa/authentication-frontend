@@ -49,9 +49,10 @@ const ForgetPassword = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-neutral-ultra-light">
+    <div className="flex justify-center items-center min-h-screen bg-neutral-ultra-light px-4 sm:px-6">
       <Toaster position="top-right" />
-      <div className="card w-full max-w-md shadow-xl bg-neutral-ultra-light p-8">
+      <div className="card w-full max-w-md shadow-xl bg-neutral-ultra-light p-6 sm:p-8 rounded-2xl">
+
         <button
           type="button"
           onClick={() => {
@@ -62,18 +63,17 @@ const ForgetPassword = () => {
               navigate("/");
             }
           }}
-          className="flex items-center gap-2 text-white font-semibold rounded-full bg-primary px-6 py-2 mb-6 hover:bg-primary-dark"
+          className="flex items-center gap-2 text-white font-semibold rounded-full bg-primary px-5 sm:px-6 py-2 mb-5 sm:mb-6 hover:bg-primary-dark text-sm sm:text-base"
         >
           <FaArrowLeft /> Back
         </button>
 
-        <h2 className="text-xl font-semibold text-primary mt-8 mb-2">
+        <h2 className="text-lg sm:text-xl font-semibold text-primary mt-6 sm:mt-8 mb-2">
           {showOtp ? "Verify OTP" : "Forgot Password"}
         </h2>
-        <p className="text-sm mb-8">
+        <p className="text-xs sm:text-sm mb-6 sm:mb-8 text-neutral-dark">
           {showOtp ? "Enter the OTP sent to your email" : "Enter your email to receive OTP"}
         </p>
-
         <form
           onSubmit={showOtp ? handleVerifyOtp : handleSendOtp}
           className="space-y-4"
@@ -85,7 +85,7 @@ const ForgetPassword = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full px-4 py-2 border border-neutral-light rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full px-3 sm:px-4 py-2 border border-neutral-light rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-sm sm:text-base"
             />
           )}
 
@@ -96,18 +96,18 @@ const ForgetPassword = () => {
               value={otp}
               onChange={(e) => setOtp(e.target.value)}
               required
-              className="w-full px-4 py-2 border border-neutral-light rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full px-3 sm:px-4 py-2 border border-neutral-light rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-sm sm:text-base"
             />
           )}
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full flex items-center justify-center py-2 px-4 bg-primary text-white font-bold rounded-md hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50"
+            className="w-full flex items-center justify-center py-2 px-4 bg-primary text-white font-bold rounded-md hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50 text-sm sm:text-base"
           >
             {loading && (
               <svg
-                className="animate-spin mr-3 h-5 w-5 text-white"
+                className="animate-spin mr-2 sm:mr-3 h-4 w-4 sm:h-5 sm:w-5 text-white"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -132,6 +132,7 @@ const ForgetPassword = () => {
         </form>
       </div>
     </div>
+
   );
 };
 
