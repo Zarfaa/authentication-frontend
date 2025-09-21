@@ -6,8 +6,8 @@ It provides authentication flows, including **signup, login, email verification,
 ##  Getting Started  
 
 ### 1️ Clone the Repository  
-**git clone https://github.com/<your-username>/<your-repo>.git**
-**cd <your-repo>**
+git clone https://github.com/<your-username>/<your-repo>.git
+cd <your-repo>
 
 ### Install Dependencies  
 npm install
