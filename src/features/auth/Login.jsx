@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
 import { login } from "../../services/auth.services";
 import logo from '../../assets/Analytics_Audtor_logo.png'
@@ -10,7 +10,7 @@ const Login = () => {
   const [username, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
+  const app2Url = import.meta.env.VITE_APP2_URL;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,16 +19,12 @@ const Login = () => {
     try {
       const res = await login({ email: username, password });
       if (res.data?.statusCode === "success") {
-        toast.success(res?.message || "Login successful");
+        toast.success(res?.data?.message);
         localStorage.setItem("token", res.data?.data?.token);
-        navigate("/home");
-      } else {
-        toast.error(res?.message || "Login failed. Try again.");
+        window.location.href = app2Url
       }
     } catch (err) {
-      const errorMessage =
-        err.response?.message || "Login failed. Try again.";
-      toast.error(errorMessage);
+      toast.error(err.response?.data?.message);
     } finally {
       setLoading(false);
     }
