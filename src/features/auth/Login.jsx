@@ -36,7 +36,7 @@ const Login = () => {
 
         <div className="bg-primary-light p-4 sm:p-6 rounded-t-xl flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
           <div className="text-center sm:text-left">
-            <h2 className="text-lg sm:text-xl font-semibold text-primary">Welcome Back!</h2>
+            <h2 className="text-lg sm:text-xl font-semibold text-primary">Welcome!</h2>
             <p className="text-xs sm:text-sm text-white">Sign in to continue</p>
           </div>
           <div className="flex justify-center sm:justify-end">
