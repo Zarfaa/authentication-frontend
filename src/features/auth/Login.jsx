@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
 import { login } from "../../services/auth.services";
@@ -12,6 +12,21 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const app2Url = import.meta.env.VITE_APP2_URL;
 
+useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const loggedOut = params.get("loggedOut");
+
+    if (loggedOut) {
+      localStorage.removeItem("token");
+      window.history.replaceState({}, document.title, "/");
+      return;
+    }
+    const token = localStorage.getItem("token");
+    if (token) {
+      window.location.href = `${app2Url}?token=${token}`;
+    }
+  }, []);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -21,10 +36,10 @@ const Login = () => {
       if (res.data?.statusCode === "success") {
         toast.success(res?.data?.message);
         localStorage.setItem("token", res.data?.data?.token);
-        window.location.href = app2Url
+        window.location.href = `${app2Url}?token=${res.data?.data?.token}`;
       }
     } catch (err) {
-      toast.error(err.response?.data?.message);
+      toast.error(err.response?.data?.message || "Login failed");
     } finally {
       setLoading(false);
     }
