@@ -16,7 +16,7 @@ const Subscribe = () => {
 
     const subscribeUser = async () => {
       try {
-        const res = await axios.get(`${import.meta.env.VITE_API_URL}/subscribe`, {
+        const res = await axios.get(`${import.meta.env.VITE_API_BASE}/subscribe`, {
           params: { email },
         });
         setStatus(res.data || "You are now subscribed! Thank you!");
